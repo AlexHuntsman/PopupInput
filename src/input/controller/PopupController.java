@@ -32,7 +32,7 @@ public class PopupController
 			myPopups.showResponce("You typed " + myAge);
 			
 			String tempWeight = myPopups.grabAnswer("Type in your weight");
-			double myWeight = Double.parseDouble(tempWeight);
+			double myWeight;
 			//Check at home if it is a double
 			
 			if(isDouble(temp))
@@ -41,7 +41,7 @@ public class PopupController
 			}
 			else
 			{
-				myWeight = -9.99;
+				myWeight = 9.99;
 			}
 			
 			myPopups.showResponce("You typed "+ myWeight);
@@ -68,7 +68,7 @@ public class PopupController
 		
 		private boolean isDouble(String input)
 		{
-			boolean isDouble = false;
+			Boolean isDouble = false;
 			
 			try
 			{
