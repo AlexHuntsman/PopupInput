@@ -18,30 +18,38 @@ public class PopupController
 			String myName = myPopups.grabAnswer("type in your name");
 			myPopups.showResponce("You typed in: " + myName);
 			
-			String temp = myPopups.grabAnswer("type in your age");
+			String userNumber = myPopups.grabAnswer("type in your age");
 			int myAge;
 			
-			if(isInteger(temp))
+			while(!isInteger(userNumber))
 			{
-				myAge = Integer.parseInt(temp);
+				userNumber = myPopups.grabAnswer("type in a positive intiger for your age!!");
+			}
+			
+			if(isInteger(userNumber))
+			{
+				myAge = Integer.parseInt(userNumber);
 			}
 			else
 			{
 				myAge = -9999999;
 			}
+			
+			
 			myPopups.showResponce("You typed " + myAge);
 			
 			String tempWeight = myPopups.grabAnswer("Type in your weight");
 			double myWeight;
+			
 			//Check at home if it is a double
 			
-			if(isDouble(temp))
+			if(isDouble(tempWeight))
 			{
-				myWeight = Double.parseDouble(temp);
+				myWeight = Double.parseDouble(tempWeight);
 			}
 			else
 			{
-				myWeight = 9.99;
+				myWeight = -9999.99;
 			}
 			
 			myPopups.showResponce("You typed "+ myWeight);
