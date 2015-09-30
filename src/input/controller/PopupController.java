@@ -43,6 +43,11 @@ public class PopupController
 			
 			//Check at home if it is a double
 			
+			while(!isDouble(tempWeight))
+			{
+				tempWeight = myPopups.grabAnswer("type in a real number for your weight");
+			}
+			
 			if(isDouble(tempWeight))
 			{
 				myWeight = Double.parseDouble(tempWeight);
