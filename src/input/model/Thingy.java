@@ -9,7 +9,9 @@ public class Thingy
 		private String name;
 		private int age;
 		private double weight;
-		
+		/**
+		 * Sets default values for variables
+		 */
 		public Thingy()
 		{
 			name = "";
@@ -17,7 +19,12 @@ public class Thingy
 			weight = -.008;
 			
 		}
-		
+		/**
+		 * Constructor that sets user input to the values Name, Age, and Weight.
+		 * @param name String Value for user name
+		 * @param age An int value for user age
+		 * @param weight A double value for user weight
+		 */
 		public Thingy(String name, int age, double weight)
 		{
 			//this. refers to the current instance of this object (A thingy)
